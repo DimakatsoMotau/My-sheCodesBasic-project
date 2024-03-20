@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background: radial-gradient(
+          circle at 7.5% 24%,
+          rgb(237, 161, 193) 0%,
+          rgb(250, 178, 172) 25.5%,
+          rgb(190, 228, 210) 62.3%,
+          rgb(215, 248, 247) 93.8%
+        );
+        font-family: "Cerebri Sans", Helvetica, Arial, sans-serif;
+      }
+      h1 {
+        text-shadow: rgba(10, 10, 10, 0.3) 5px 5px 10px;
+        font-weight: lighter;
+        font-size: 1.8em;
+      }
+
+      span {
+        font-size: 1em;
+      }
+
+      h2 {
+        font-weight: lighter;
+      }
+
+      img {
+        width: 500px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+      }
+
+      button {
+        padding: 15px 20px;
+        background-color: #015dab;
+        color: #ffff;
+        border: 1px solid #015dab;
+        border-radius: 10px;
+        font-size: 1em;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+        transition: all 200ms ease-in-out;
+      }
+
+      button:hover {
+        background-color: transparent;
+        color: #015dab;
+        opacity: 0.6;
+      }
+
+      .description a {
+        color: #015dab;
+      }
+
+      .footer a {
+        text-decoration: none;
+        color: #000000;
+      }
+
+      .footer a:hover {
+        text-decoration: underline;
+        color: #015dab;
+      }
+
+      .container {
+        text-align: center;
+      }
+
+      .description,
+      .button-description {
+        width: 815px;
+        margin: 20px auto;
+        line-height: 21px;
+      }
+
+      .button-description {
+        color: #015dab;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Harnessing AI for Development <span>🤖</span></h1>
+      <h2>Unlocking the Power of AI in Software Creation</h2>
+      <img
+        src="https://www.unite.ai/wp-content/uploads/2023/11/DALL%C2%B7E-2023-11-12-13.06.04-Create-an-anime-style-illustration-of-a-half-human-half-robot-character-engaged-in-coding.-The-human-side-should-be-an-anime-character-of-East-Asian-.png"
+        alt="coding-human"
+      />
+      <p class="description">
+        Welcome to the future of software development where innovation meets
+        efficiency. Make the leap
+        <strong>from low-code to AI-driven development</strong> and unlock a
+        world of endless possibilities. Harness the power of artificial
+        intelligence to streamline your workflow, automate tedious tasks, and
+        revolutionize the way you build applications. Say goodbye to limitations
+        and hello to boundless creativity as you embrace cutting-edge technology
+        to propel your projects to new heights. Join us on this journey as we
+        pave the way for the next generation of developers.
+        <a
+          href="https://www.unite.ai/will-large-language-models-end-programming/"
+          >learn more</a
+        >
+      </p>
+      <p class="button-description">
+        <em>
+          Introducing the gateway to your AI-driven future.
+          <strong>Click below </strong> to experience the transformative power
+          of AI in action. Let's elevate your development journey together.
+          Click here to embark on a new era of innovation😀!
+        </em>
+      </p>
+      <button type="submit">Experience AI Magic 🤖</button>
+      <p class="footer">
+        Coded by
+        <a href="https://github.com/DimakatsoMotau" target="_blank"
+          >Dimakatso Motau</a
+        >
+      </p>
+      <hr />
+    </div>
+
+    <script>
+      function codingPreference() {
+        let firstName = prompt("What is your full name?");
+        let programminglang = prompt(
+          "Which programming language interests you for our AI?"
+        );
+        let codingLevel = prompt(
+          "Your coding level: beginner, medium, or intermediate?"
+        );
+        codingLevel = codingLevel.trim().toLowerCase();
+
+        alert(`Hi ${firstName}, Welcome to Harnessing AI for Development😀!`);
+
+        if (codingLevel === "beginner") {
+          alert(
+            `Let's start from our beginner program. Excited to help with ${programminglang} learning with our AI😄!`
+          );
+        } else {
+          if (codingLevel === "medium") {
+            alert(
+              `Let's start from our medium program. Excited to help with ${programminglang} learning with our AI😄!`
+            );
+          } else {
+            alert(
+              `Let's start from our intermediate program. Excited to help with ${programminglang} learning with our AI😄!`
+            );
+          }
+        }
+        signUpButton.innerHTML = `😃 <br> <em>${firstName} you are In!</em>`;
+      }
+
+      let signUpButton = document.querySelector("button");
+
+      signUpButton.addEventListener("click", codingPreference);
+    </script>
+  </body>
+</html>
